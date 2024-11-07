@@ -1,4 +1,4 @@
-from task2.cse_fest_management.interfaces.segment_interface import SegmentInterface
+from task2.cse_fest_management.interfaces.segment_Interface import SegmentInterface
 from models.event import Event
 
 class InnovationShowcase(Event, SegmentInterface):

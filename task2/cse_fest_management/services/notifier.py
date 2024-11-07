@@ -1,4 +1,4 @@
-from interfaces.notification_interface import NotificationInterface
+from interfaces.notification_Interface import NotificationInterface
 
 class Notifier(NotificationInterface):
     """
