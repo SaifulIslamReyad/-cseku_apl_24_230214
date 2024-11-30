@@ -1,31 +1,21 @@
 from abc import ABC, abstractmethod
 
+# Defining an interface for event segments.
+# This adheres to the **Interface Segregation Principle** by ensuring that only relevant methods 
+# for managing event segments (like registration and starting an event) are included in this interface.
 class SegmentInterface(ABC):
-    """
-    The SegmentInterface defines the necessary methods that any segment class
-    (like SymposiumTalk, Datathon, etc.) must implement. This ensures that each
-    segment can handle participant registration and event management in a standardized way.
-    """
-    
     @abstractmethod
     def register_participant(self, participant):
         """
-        Abstract method to register a participant for the event.
-        
-        Parameters:
-        - participant: The participant object that wants to register for the event.
-        
-        This method must be implemented by any class that inherits from SegmentInterface.
+        Abstract method for registering a participant in the segment.
+        This ensures flexibility for each segment to define its own registration logic.
         """
         pass
 
     @abstractmethod
     def start_event(self):
         """
-        Abstract method to start the event.
-        
-        This method should define the actions to be performed when the event begins
-        (such as announcing the start or triggering event-related processes).
-        It must be implemented by any class that inherits from SegmentInterface.
+        Abstract method for starting the event.
+        Enforces that every class implementing this interface must define its behavior when the event starts.
         """
         pass

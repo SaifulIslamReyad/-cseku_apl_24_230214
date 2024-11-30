@@ -1,45 +1,22 @@
-from task2.CSE_Fest_Management_System.interfaces.segment_Interface import (
-    SegmentInterface,
+# Importing required interfaces and classes
+from interfaces.segment_Interface import (
+    SegmentInterface,  # Interface for segment-related functionalities
 )
-from models.event import Event
+from models.event import Event  # Event base class for common event functionalities
 
 
+# The InnovationShowcase class represents a specific event and follows the principles of SegmentInterface
 class InnovationShowcase(Event, SegmentInterface):
-    """
-    The InnovationShowcase class represents a specific segment of the CSE Fest: the Innovation Showcase.
-    It inherits from the Event class to manage general event properties and implements
-    the SegmentInterface to ensure it has methods for participant registration and event starting.
-    """
-
     def __init__(self, name, description):
-        """
-        Initializes an Innovation Showcase event with a name and description.
-
-        Parameters:
-        - name: The name of the Innovation Showcase.
-        - description: A brief description of the event.
-
-        Uses the Event class's initializer to set these attributes.
-        """
+        # Using super() to call the parent class (Event) initializer
+        # This adheres to the Open/Closed principle by allowing extension without modifying the base class
         super().__init__(name, description)
 
     def register_participant(self, participant):
-        """
-        Registers a participant for the Innovation Showcase event.
-
-        Parameters:
-        - participant: The participant object to be added to the Innovation Showcase's participant list.
-
-        This method appends the participant to the `participants` list inherited from the Event class.
-        """
-        self.participants.append(
-            participant
-        )  # Add participant to the event's participant list
+        # Adding the participant to the event's list (delegating participant management to the event)
+        self.participants.append(participant)
 
     def start_event(self):
-        """
-        Starts the Innovation Showcase event.
-
-        This method prints a message to indicate that the Innovation Showcase is starting.
-        """
-        print("Innovation Showcase is now starting!")  # Simulate starting the event
+        # Start the specific event (Innovation Showcase) and print the corresponding message
+        # This adheres to the Interface Segregation Principle by providing a clear, simple method for this specific event type
+        print("Innovation Showcase is now starting!")
