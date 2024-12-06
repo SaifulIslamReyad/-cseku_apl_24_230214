@@ -12,7 +12,7 @@ class Event(SegmentInterface):
         self.participants = []
 
     # Open/Closed Principle (OCP): 
-    # The Event class is open for extension (you can create subclasses for different types of events)
+    # The Event class is open for extension ( can be created subclasses for different types of events)
     # but closed for modification. It doesn't require modification to add new event types, just inheritance.
     def register_participant(self, participant):
         self.participants.append(participant)
