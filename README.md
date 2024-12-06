@@ -3,6 +3,7 @@
 This project implements an **Event Management System** using the **Model-View-Controller (MVC)** architecture. It follows the **SOLID principles** to ensure clean, maintainable, and extensible code.
 
 ## File Structure
+```plaintext
 project/
 ├── model/
 │ ├── init.py # Makes the directory a Python package 
