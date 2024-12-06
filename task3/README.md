@@ -1,6 +1,6 @@
 # MVC Event Management System
 
-This project implements an **Event Management System** using the **Model-View-Controller (MVC)** architecture. It follows the **SOLID principles** to ensure clean, maintainable, and extensible code.
+This project implements an **Event Management System** using the **Model-View-Controller (MVC)** architecture.
 
 ## Explanation of MVC Architecture
 
@@ -53,20 +53,17 @@ The `main.py` file acts as the entry point, initializing the Models, Views, and 
 ```plaintext
 project/
 ├── model/
-│ ├── init.py # Makes the directory a Python package 
 │ ├── event.py # Handles event data and logic 
 │ ├── participant.py # Encapsulates participant information 
 │ ├── registration.py # Manages participant registrations 
 │ ├── scheduler.py # Manages event scheduling 
 │ └── results.py # Stores and retrieves event results 
 ├── view/ 
-│ ├── init.py # Makes the directory a Python package 
 │ ├── event_view.py # Formats and displays event messages 
 │ ├── participant_view.py # Displays participant registration details 
 │ ├── notification_view.py # Formats notifications for participants 
 │ └── result_view.py # Prepares results for display 
 ├── controller/ 
-│ ├── init.py # Makes the directory a Python package 
 │ ├── event_controller.py # Handles event interactions 
 │ ├── registration_controller.py # Manages participant registrations 
 │ └── result_controller.py # Manages event results 
