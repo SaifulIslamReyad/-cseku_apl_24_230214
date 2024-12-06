@@ -10,6 +10,7 @@ from controller.registration_controller import RegistrationController
 from controller.result_controller import ResultController
 
 def main():
+    
     # Models
     symposium = Event("Symposium Talk", "Hear from top industry professionals.")
     datathon = Event("Datathon", "Showcase your machine learning skills.")
